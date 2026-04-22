@@ -1,0 +1,92 @@
+{
+  "Original": {
+    "Exact_Match (TriviaQA)": "40.0%",
+    "Summarization (CNN/DM)": "0.199",
+    "Logic (GSM8K)": "42.0%",
+    "Sentiment (SST2)": "45.0%",
+    "Coding (MBPP)": "0.166",
+    "Legal_Summ (BillSum)": "0.264",
+    "__latency_tps__": "11.836230221207726",
+    "__memory_gb__": "3.55877685546875"
+  },
+  "General_Flat": {
+    "Exact_Match (TriviaQA)": "20.0%",
+    "Summarization (CNN/DM)": "0.199",
+    "Logic (GSM8K)": "44.0%",
+    "Sentiment (SST2)": "87.0%",
+    "Coding (MBPP)": "0.146",
+    "Legal_Summ (BillSum)": "0.240",
+    "__latency_tps__": "12.623107443837775",
+    "__memory_gb__": "3.108612060546875"
+  },
+  "Math_Flat": {
+    "Exact_Match (TriviaQA)": "13.0%",
+    "Summarization (CNN/DM)": "0.189",
+    "Logic (GSM8K)": "54.0%",
+    "Sentiment (SST2)": "73.0%",
+    "Coding (MBPP)": "0.138",
+    "Legal_Summ (BillSum)": "0.248",
+    "__latency_tps__": "15.172933257837814",
+    "__memory_gb__": "3.108612060546875"
+  },
+  "Code_Flat": {
+    "Exact_Match (TriviaQA)": "14.0%",
+    "Summarization (CNN/DM)": "0.191",
+    "Logic (GSM8K)": "48.0%",
+    "Sentiment (SST2)": "84.0%",
+    "Coding (MBPP)": "0.169",
+    "Legal_Summ (BillSum)": "0.258",
+    "__latency_tps__": "16.589030289808377",
+    "__memory_gb__": "3.108612060546875"
+  },
+  "Law_Flat": {
+    "Exact_Match (TriviaQA)": "14.0%",
+    "Summarization (CNN/DM)": "0.200",
+    "Logic (GSM8K)": "37.0%",
+    "Sentiment (SST2)": "88.0%",
+    "Coding (MBPP)": "0.139",
+    "Legal_Summ (BillSum)": "0.255",
+    "__latency_tps__": "16.78206633743475",
+    "__memory_gb__": "3.108612060546875"
+  },
+  "General_DALSP": {
+    "Exact_Match (TriviaQA)": "19.0%",
+    "Summarization (CNN/DM)": "0.193",
+    "Logic (GSM8K)": "26.0%",
+    "Sentiment (SST2)": "83.0%",
+    "Coding (MBPP)": "0.166",
+    "Legal_Summ (BillSum)": "0.235",
+    "__latency_tps__": "17.628678062004802",
+    "__memory_gb__": "2.99627685546875"
+  },
+  "Math_DALSP": {
+    "Exact_Match (TriviaQA)": "8.0%",
+    "Summarization (CNN/DM)": "0.185",
+    "Logic (GSM8K)": "53.0%",
+    "Sentiment (SST2)": "86.0%",
+    "Coding (MBPP)": "0.134",
+    "Legal_Summ (BillSum)": "0.243",
+    "__latency_tps__": "10.765640184915643",
+    "__memory_gb__": "2.99627685546875"
+  },
+  "Code_DALSP": {
+    "Exact_Match (TriviaQA)": "10.0%",
+    "Summarization (CNN/DM)": "0.190",
+    "Logic (GSM8K)": "33.0%",
+    "Sentiment (SST2)": "85.0%",
+    "Coding (MBPP)": "0.174",
+    "Legal_Summ (BillSum)": "0.258",
+    "__latency_tps__": "8.202604940840743",
+    "__memory_gb__": "2.97943115234375"
+  },
+  "Law_DALSP": {
+    "Exact_Match (TriviaQA)": "10.0%",
+    "Summarization (CNN/DM)": "0.200",
+    "Logic (GSM8K)": "21.0%",
+    "Sentiment (SST2)": "87.0%",
+    "Coding (MBPP)": "0.130",
+    "Legal_Summ (BillSum)": "0.251",
+    "__latency_tps__": "15.26718531125274",
+    "__memory_gb__": "2.99627685546875"
+  }
+}
