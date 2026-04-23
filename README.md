@@ -74,7 +74,7 @@ Our evaluation confirms the phenomenon of **Superadditivity**—where cutting th
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 Ensure you have the following installed before proceeding:
