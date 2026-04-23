@@ -77,15 +77,18 @@ Our evaluation confirms the phenomenon of **Superadditivity**—where cutting th
 ## 🚀 Getting Started
 
 ### Prerequisites
+Ensure you have the following installed before proceeding:
 * Python 3.10+
-* PyTorch 2.0+
-* HuggingFace Transformers
+* PyTorch 2.0+ (CUDA enabled)
+* HuggingFace `transformers` & `datasets`
 
 ### Installation
-```bash
-git clone [https://github.com/yourusername/Domain-Aware_Layer_Sensitivity_Pruning.git](https://github.com/yourusername/Domain-Aware_Layer_Sensitivity_Pruning.git)
-cd Domain-Aware_Layer_Sensitivity_Pruning
-pip install -r requirements.txt
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/yourusername/Domain-Aware_Layer_Sensitivity_Pruning.git](https://github.com/yourusername/Domain-Aware_Layer_Sensitivity_Pruning.git)
+   cd Domain-Aware_Layer_Sensitivity_Pruning
+
 
 ## 🔮 Future Work
 
