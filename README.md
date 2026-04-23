@@ -4,14 +4,14 @@
 ![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-red.svg)
 
-## 📌 Abstract
+## Abstract
 Deploying state-of-the-art Large Language Models (LLMs) like Phi-3.5-mini is bottlenecked by their massive computational footprint. These models suffer from the "Full Depth Penalty," where every single parameter (approximately 3.8 billion) is activated for every forward pass, regardless of task complexity. Simple conversational prompts invoke the same overhead as complex mathematical reasoning, leading to high VRAM usage (3.56 GB) and slow inference speeds.
 
 This project introduces **Domain-Aware Layer-Sensitivity Pruning (DALSP)**, a prototype designed to identify structural redundancy within the MLP blocks of the transformer architecture. Pivoting from traditional magnitude-based uniform pruning, DALSP uses an information-theoretic framework based on Shannon Entropy. By adaptively allocating pruning budgets across layers, we physically remove irrelevant neurons to achieve a 20% average reduction in MLP neurons. This generates specialized subnetworks (General, Math, Code, Law) that reduce memory footprints and increase tokens-per-second (TPS) throughput, completely bypassing the need for computationally expensive retraining.
 
 ---
 
-## 🔬 Motivation: Overcoming the Limitations of Wanda
+## Motivation: Overcoming the Limitations of Wanda
 This project serves as a technical extension and critique of the Wanda (Weight-and-Activation) pruning method. While Wanda effectively ranks neuron importance, DALSP is engineered to resolve three of its critical limitations:
 
 1. **Critique of Uniformity:** Wanda applies a rigid, flat pruning rate to every layer, assuming information density is distributed evenly. DALSP recognizes structural imbalances and uses entropy to modulate the pruning rate based on individual layer sensitivity.
@@ -20,7 +20,7 @@ This project serves as a technical extension and critique of the Wanda (Weight-a
 
 ---
 
-## 🛠️ Methodology & "Structural Surgery" Pipeline
+## Methodology & "Structural Surgery" Pipeline
 
 The system is built on a rigorous three-phase pipeline transitioning from data-driven profiling to physical parameter excision.
 
@@ -42,7 +42,7 @@ Unlike sparse masking (which zeroes weights but keeps VRAM usage identical), thi
 
 ---
 
-## 📊 Evaluation & Benchmarks
+## Evaluation & Benchmarks
 
 Our evaluation confirms the phenomenon of **Superadditivity**—where cutting the model's size by 20% acts as "Structural Denoising." By physically silencing conflicting cognitive pathways (e.g., conversational sub-circuits trying to activate during a math problem), specialized capacity actually increases.
 
@@ -53,7 +53,7 @@ Our evaluation confirms the phenomenon of **Superadditivity**—where cutting th
 | :--- | :--- | :--- | :--- |
 | **Original (Unpruned)** | 3.56 | - | 11.84 |
 | **General Flat (20%)** | 3.11 | -0.45 GB (-12.6%) | 12.62 |
-| **General DALSP** | 3.00 | -0.56 GB (-15.8%) | **17.63** 🚀 |
+| **General DALSP** | 3.00 | -0.56 GB (-15.8%) | **17.63** |
 | **Math DALSP** | 2.99 | -0.57 GB (-16.0%) | 10.77 |
 | **Code DALSP** | 2.98 | -0.58 GB (-16.3%) | 8.20 |
 | **Law DALSP** | 3.00 | -0.56 GB (-15.8%) | 15.27 |
@@ -89,21 +89,11 @@ Ensure you have the following installed before proceeding:
    git clone [https://github.com/yourusername/Domain-Aware_Layer_Sensitivity_Pruning.git](https://github.com/yourusername/Domain-Aware_Layer_Sensitivity_Pruning.git)
    cd Domain-Aware_Layer_Sensitivity_Pruning
 
-
-## 🔮 Future Work
-
-1. [cite_start]**LoRA Post-Pruning Fine-Tuning:** Applying Low-Rank Adaptation to re-learn neural connections severed during surgery[cite: 214].
-2. [cite_start]**Attention Head Entropy Pruning:** Extending the DALSP methodology from MLP neurons to Multi-Head Attention components to compound memory savings[cite: 217, 218].
-3. [cite_start]**Mixture-of-Subnetworks (MoS) Routing:** Utilizing a lightweight classifier to route inference queries to the appropriate, physically distinct domain expert[cite: 221, 222].
-
 ---
 
-## 👨‍💻 Contributors
+## Team
 
 * **Areen Patil**
 * **Ramya Parsania**
 * **Krishna Sai Velidanda**
 * **Aaryan Antala**
-
----
-*Developed as part of the NLP coursework. For full theoretical background, refer to the accompanying research documentation.*
